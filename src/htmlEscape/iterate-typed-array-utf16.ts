@@ -13,7 +13,7 @@ export function iterateTypedArrayUtf16(string: string): string {
     uint16Array = new Uint16Array(string.length * 6);
   }
   let t = 0;
-
+  
   for (const char of string) {
     if (char.length === 2) {
       uint16Array[t++] = char.charCodeAt(0);

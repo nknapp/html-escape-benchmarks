@@ -8,6 +8,8 @@ import { stringReplaceWithRegexp } from "./htmlEscape/string-replace-with-regexp
 import { iterateTypedArrayUtf8 } from "./htmlEscape/iterate-typed-array-utf-8";
 import { iterateTypedArrayUtf16 } from "./htmlEscape/iterate-typed-array-utf16";
 import { iterateWithRegexTest } from "./htmlEscape/iterate-with-regex-test";
+import { npmInstallEscapeHtmlTestInsteadOfExec } from "./htmlEscape/npm-install-escape-html-test-instead-of-exec";
+import { solutionIterateOrReplaceAll } from "./htmlEscape/solution-iterate-or-replace-all";
 
 type HtmlEscape = (string: string) => string;
 
@@ -21,5 +23,6 @@ export const htmlEscapeFunctions: HtmlEscape[] = [
     stringReplaceWithRegexp,
     iterateTypedArrayUtf8,
     iterateTypedArrayUtf16,
-    iterateWithRegexTest
+    iterateWithRegexTest,
+    solutionIterateOrReplaceAll
   ];

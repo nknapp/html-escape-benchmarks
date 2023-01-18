@@ -9,6 +9,7 @@
     "bench": "vitest bench"
   },
   "devDependencies": {
+    "@vitest/ui": "^0.27.2",
     "typescript": "^4.9.3",
     "vite": "^4.0.0"
   },

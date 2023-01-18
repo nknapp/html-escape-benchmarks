@@ -1,11 +1,19 @@
 import { bench } from "vitest";
 import { htmlEscapeFunctions } from ".";
 
+function unscapedChars(count: number) {
+  return `${count} chars between escaped chars -------------`.repeat(Math.ceil(count / 40)).slice(0,count)
+}
+
 const strings: string[] = [
-  "string without escaped chars",
-  "string with all escaped chars: <=>&'`\"",
-  "a very long string with lots of escapes " + "<=>&'`\"".repeat(1000),
-  "a very logn string with lots of space between escapes" + "<=>&'`\"".repeat(1000),
+  (unscapedChars(5) + "<").repeat(100),
+  (unscapedChars(10) + "<").repeat(100),
+  (unscapedChars(20) + "<").repeat(100),
+  (unscapedChars(50) + "<").repeat(100),
+  (unscapedChars(100) + "<").repeat(100),
+  (unscapedChars(200) + "<").repeat(100),
+  (unscapedChars(500) + "<").repeat(100),
+  (unscapedChars(1000) + "<").repeat(100),
 ];
 
 for (const string of strings) {
