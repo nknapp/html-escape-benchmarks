@@ -6,14 +6,17 @@ function unscapedChars(count: number) {
 }
 
 const strings: string[] = [
-  (unscapedChars(5) + "<").repeat(100),
-  (unscapedChars(10) + "<").repeat(100),
-  (unscapedChars(20) + "<").repeat(100),
-  (unscapedChars(50) + "<").repeat(100),
-  (unscapedChars(100) + "<").repeat(100),
-  (unscapedChars(200) + "<").repeat(100),
-  (unscapedChars(500) + "<").repeat(100),
-  (unscapedChars(1000) + "<").repeat(100),
+  unscapedChars(5),
+  unscapedChars(10),
+  (unscapedChars(5) + ">").repeat(2),
+    (unscapedChars(5) + "<").repeat(10),
+  (unscapedChars(10) + "<").repeat(10),
+  (unscapedChars(20) + "<").repeat(10),
+  (unscapedChars(50) + "<").repeat(10),
+  (unscapedChars(100) + "<").repeat(10),
+  (unscapedChars(200) + "<").repeat(10),
+  (unscapedChars(500) + "<").repeat(10),
+  (unscapedChars(1000) + "<").repeat(10),
 ];
 
 for (const string of strings) {
