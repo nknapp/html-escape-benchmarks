@@ -1,9 +1,12 @@
 import { rules } from "./rules";
 
 export function stringReplaceAll(string: string): string {
-  let result = string;
-  for (const [find, replace] of rules) {
-    result = result.replaceAll(find, replace);
-  }
-  return result;
+  return string
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#x27;")
+    .replaceAll("`", "&#x60;")
+    .replaceAll("=", "&#x3D;");
 }
