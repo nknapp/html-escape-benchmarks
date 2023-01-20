@@ -26,7 +26,6 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
 import { illegalCharRegex, rules } from "./rules";
-import { stringReplaceAll } from "./string-replaceAll";
 
 /* Adjustst by Nils Knappmeier to use string replace for longer strings */
 
